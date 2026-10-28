@@ -1,0 +1,21 @@
+name = "powers-grocery"
+main = "worker.js"
+compatibility_date = "2026-08-01"
+
+# The list itself. Create it once with:
+#   npx wrangler kv namespace create LIST
+# then paste the id it prints into the line below.
+[[kv_namespaces]]
+binding = "LIST"
+id = "PASTE_YOUR_KV_NAMESPACE_ID"
+
+# Tokens are NOT stored here. They are secrets, set with:
+#   npx wrangler secret put CARTER_TOKEN
+#   npx wrangler secret put PARTNER_TOKEN
+#   npx wrangler secret put ADMIN_TOKEN
+
+# The dinner window keeps itself full. 09:00 UTC is 5am ET, before anyone looks
+# and before any Claude run. This is the floor: it guarantees a plan exists even
+# if nothing else in the system can reach the Worker.
+[triggers]
+crons = ["0 9 * * *"]

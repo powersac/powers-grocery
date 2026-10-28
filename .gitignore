@@ -1,0 +1,8 @@
+node_modules/
+seed.json
+.wrangler/
+.DS_Store
+worker.js
+page.preview.html
+.env.capture
+docs/images/*.tmp.png

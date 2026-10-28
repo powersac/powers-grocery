@@ -1,0 +1,50 @@
+<svg viewBox="0 0 1180 400" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <title>How the grocery list stays one list</title>
+
+  <!-- palette, the dark half of the app's own tokens in src/style.css -->
+  <!-- ink #E9EDE0, muted #A0A896, focus blue #7FB2E8, clay #E0996F, herb green #8FBE93, faint #79826F -->
+
+  <!-- ribbons first, so the nodes sit on top of them -->
+  <!-- Carter's link -> Worker -->
+  <path d="M 212,80 C 331,80 331,110 450,110 L 450,180 C 331,180 331,150 212,150 Z" fill="#7FB2E8" fill-opacity="0.5"/>
+  <!-- Partner's link -> Worker -->
+  <path d="M 212,166 C 331,166 331,180 450,180 L 450,250 C 331,250 331,236 212,236 Z" fill="#E0996F" fill-opacity="0.5"/>
+  <!-- the daily cron -> Worker -->
+  <path d="M 212,252 C 331,252 331,250 450,250 L 450,280 C 331,280 331,282 212,282 Z" fill="#8FBE93" fill-opacity="0.5"/>
+  <!-- Worker -> the one KV blob -->
+  <path d="M 462,110 C 591,110 591,110 720,110 L 720,266 C 591,266 591,266 462,266 Z" fill="#C9D1C4" fill-opacity="0.3"/>
+  <!-- Worker -> refused, the thin flow that never reaches the blob -->
+  <path d="M 462,266 C 591,266 591,280 720,280 L 720,294 C 591,294 591,280 462,280 Z" fill="#79826F" fill-opacity="0.6"/>
+  <!-- the one KV blob -> both phones -->
+  <path d="M 732,110 C 866,110 866,110 1000,110 L 1000,266 C 866,266 866,266 732,266 Z" fill="#C9D1C4" fill-opacity="0.3"/>
+
+  <!-- nodes -->
+  <rect x="200"  y="80"  width="12" height="70"  rx="2" fill="#7FB2E8"/>
+  <rect x="200"  y="166" width="12" height="70"  rx="2" fill="#E0996F"/>
+  <rect x="200"  y="252" width="12" height="30"  rx="2" fill="#8FBE93"/>
+  <rect x="450"  y="110" width="12" height="170" rx="2" fill="#C9D1C4"/>
+  <rect x="720"  y="110" width="12" height="156" rx="2" fill="#C9D1C4"/>
+  <rect x="720"  y="280" width="12" height="14"  rx="2" fill="#79826F"/>
+  <rect x="1000" y="110" width="12" height="156" rx="2" fill="#C9D1C4"/>
+
+  <!-- column 1 labels: right anchored, left of the nodes -->
+  <text x="192" y="105" text-anchor="end" font-size="15" font-weight="600" fill="#E9EDE0">Carter's link</text>
+  <text x="192" y="121" text-anchor="end" font-size="12" fill="#A0A896">plans, edits, deletes</text>
+  <text x="192" y="191" text-anchor="end" font-size="15" font-weight="600" fill="#E9EDE0">Partner's link</text>
+  <text x="192" y="207" text-anchor="end" font-size="12" fill="#A0A896">shops, ticks, adds</text>
+  <text x="192" y="262" text-anchor="end" font-size="15" font-weight="600" fill="#E9EDE0">Daily cron</text>
+  <text x="192" y="278" text-anchor="end" font-size="12" fill="#A0A896">every day at 09:00 UTC</text>
+
+  <!-- column 2 label: centered above the node -->
+  <text x="456" y="70" text-anchor="middle" font-size="15" font-weight="600" fill="#E9EDE0">One Worker</text>
+  <text x="456" y="86" text-anchor="middle" font-size="12" fill="#A0A896">the link is the credential</text>
+
+  <!-- column 3 labels -->
+  <text x="726" y="70" text-anchor="middle" font-size="15" font-weight="600" fill="#E9EDE0">One KV blob</text>
+  <text x="726" y="86" text-anchor="middle" font-size="12" fill="#A0A896">catalog, list, ten days of dinners</text>
+  <text x="742" y="292" text-anchor="start" font-size="11" fill="#A0A896">refused, only Carter's link deletes and plans</text>
+
+  <!-- column 4 label: left anchored, right of the node -->
+  <text x="1020" y="183" text-anchor="start" font-size="15" font-weight="600" fill="#E9EDE0">Both phones</text>
+  <text x="1020" y="199" text-anchor="start" font-size="12" fill="#A0A896">within fifteen seconds</text>
+</svg>

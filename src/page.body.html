@@ -1,0 +1,55 @@
+<div class="wrap">
+  <h1>Groceries</h1>
+  <p class="when" id="when">Loading…</p>
+
+  <div class="stick">
+    <div class="bar">
+      <div class="seg" role="group" aria-label="View">
+        <button type="button" id="f-buy" aria-pressed="true">To buy</button>
+        <button type="button" id="f-all" aria-pressed="false">Everything</button>
+      </div>
+      <span class="tally" id="tally" aria-live="polite" aria-label="Items left to buy"></span>
+    </div>
+    <div class="search" id="searchwrap" hidden>
+      <input type="search" id="q" placeholder="Search everything" aria-label="Search">
+    </div>
+    <div class="search">
+      <form class="addbox" id="addform">
+        <input type="text" id="add-name" placeholder="Add anything to the list" aria-label="Add an item">
+        <button type="submit">Add</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="rows"><div class="boot">Loading the list…</div></div>
+
+  <div class="acts" id="acts" hidden>
+    <button type="button" id="refresh">Refresh</button>
+  </div>
+  <div class="toast" id="toast" aria-live="polite"></div>
+
+  <section id="dinners" hidden>
+    <h2 class="dh">Dinners coming up</h2>
+    <ol class="dl" id="dl"></ol>
+    <p class="dnote">The time is hands-on minutes, not oven time.</p>
+  </section>
+
+  <footer>
+    <p id="footnote"></p>
+  </footer>
+</div>
+
+<div class="banner" id="banner" hidden></div>
+
+<dialog id="picker">
+  <form method="dialog" class="pick">
+    <h3 id="picker-title">Change dinner</h3>
+    <ul id="picker-opts"></ul>
+    <div class="addrow">
+      <input type="text" id="picker-custom" placeholder="Something else" aria-label="A different dinner">
+      <input type="number" id="picker-mins" min="0" max="120" step="1" value="20" aria-label="Hands-on minutes">
+      <button type="button" id="picker-save">Set</button>
+    </div>
+    <button type="button" id="picker-close" class="ghostbtn">Cancel</button>
+  </form>
+</dialog>
